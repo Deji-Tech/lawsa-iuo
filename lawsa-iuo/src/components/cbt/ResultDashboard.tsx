@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, RefreshCcw, Home, Sparkles, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -52,13 +53,13 @@ const ResultDashboard = ({ score, total, onRestart, onGoHome }: ResultDashboardP
                                         <span className="text-muted-foreground">Correct Answers</span>
                                         <span className="font-bold text-green-600">{score} questions</span>
                                     </div>
-                                    <Progress value={(score / total) * 100} className="h-2 bg-secondary" indicatorClassName="bg-green-600" />
+                                    <Progress value={(score / total) * 100} className="h-2 [&>div]:bg-green-600" />
 
                                     <div className="flex justify-between text-sm">
                                         <span className="text-muted-foreground">Incorrect Answers</span>
                                         <span className="font-bold text-destructive">{total - score} questions</span>
                                     </div>
-                                    <Progress value={((total - score) / total) * 100} className="h-2 bg-secondary" indicatorClassName="bg-destructive" />
+                                    <Progress value={((total - score) / total) * 100} className="h-2 [&>div]:bg-red-500" />
                                 </div>
                             </div>
 
@@ -71,9 +72,11 @@ const ResultDashboard = ({ score, total, onRestart, onGoHome }: ResultDashboardP
                                 <p className="text-xs md:text-sm text-muted-foreground mb-6 leading-relaxed">
                                     "I noticed you missed the question on **Receiving Stolen Property**. Would you like me to explain the legal principles of Section 427 for you?"
                                 </p>
-                                <Button className="w-full bg-brand hover:bg-brand-dim text-white rounded-xl h-10 md:h-12 text-sm md:text-base">
-                                    Ask Steve Now <ArrowRight className="ml-2" size={16} />
-                                </Button>
+                                <Link href="/dashboard/steve">
+                                    <Button className="w-full bg-brand hover:bg-brand-dim text-white rounded-xl h-10 md:h-12 text-sm md:text-base">
+                                        Ask Steve Now <ArrowRight className="ml-2" size={16} />
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
 

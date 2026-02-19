@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Lock } from "lucide-react";
-import { SignInButton } from "@clerk/nextjs";
+import Link from "next/link";
 
 const LockedContent = () => {
     return (
@@ -35,16 +35,16 @@ const LockedContent = () => {
                     Sign in to access this lecture note and track your study progress.
                 </p>
 
-                <SignInButton mode="modal">
+                <Link href="/sign-in">
                     <button className="group relative inline-flex h-11 items-center justify-center overflow-hidden rounded-full bg-brand px-8 font-medium text-white transition-all duration-300 hover:bg-brand-dim hover:ring-2 hover:ring-brand hover:ring-offset-2 hover:ring-offset-background">
                         <span className="mr-2">Unlock Now</span>
                         <Lock size={16} className="transition-transform group-hover:rotate-12" />
                         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:animate-shimmer" />
                     </button>
-                </SignInButton>
+                </Link>
 
                 <p className="mt-4 text-xs text-muted-foreground">
-                    Secure access via Clerk authentication.
+                    Secure access via Supabase authentication.
                 </p>
             </motion.div>
         </div>

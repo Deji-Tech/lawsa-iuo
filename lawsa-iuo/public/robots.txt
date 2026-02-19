@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow dashboard and auth pages from indexing
+Disallow: /dashboard/
+Disallow: /sign-in/
+Disallow: /sign-up/
+
+# Sitemap
+Sitemap: https://lawsa-iuo.vercel.app/sitemap.xml

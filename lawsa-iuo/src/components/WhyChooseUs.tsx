@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Smartphone, CheckCircle, BarChart3 } from "lucide-react";
+import { Smartphone, CheckCircle2, BarChart3 } from "lucide-react";
 
 const features = [
   {
@@ -10,7 +10,7 @@ const features = [
     description: "You can visit our website at anytime, and on your preferred device.",
   },
   {
-    icon: <CheckCircle size={28} />,
+    icon: <CheckCircle2 size={28} />,
     title: "Quality",
     description: "Notes were compiled using the most current and authoritative sources.",
   },
@@ -23,7 +23,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-dark-surface py-16 sm:py-20 md:py-24">
+    <section className="bg-slate-50 dark:bg-slate-900 py-16 sm:py-20 md:py-24">
       <div className="container mx-auto px-5 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,10 +32,10 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 font-serif text-3xl text-dark-surface-foreground sm:text-4xl md:text-5xl">
+          <h2 className="mb-4 font-serif text-3xl text-foreground sm:text-4xl md:text-5xl">
             Why Choose Us?
           </h2>
-          <p className="mx-auto max-w-lg text-base text-dark-surface-foreground/60">
+          <p className="mx-auto max-w-lg text-base text-muted-foreground">
             Access to diverse areas of law all from a single repository.
           </p>
         </motion.div>
