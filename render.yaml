@@ -5,7 +5,7 @@ services:
     plan: free
     buildCommand: npm install && npm run build
     startCommand: npm start
-    buildDir: lawsa-iuo
+    rootDirectory: lawsa-iuo
     envVars:
       - key: NEXT_PUBLIC_SUPABASE_URL
         sync: false
